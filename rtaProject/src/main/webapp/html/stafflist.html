@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="css/staff.css" rel="stylesheet">
+   </head>
+  <body>
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header text-center">
+          <h3>RTAD</h3>
+        </div>
+
+        <ul class="lisst-unstyled components">
+          <p>The Provider</p>
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+            <ul class="collapse lisst-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Home 1</a>
+              </li>
+              <li>
+                <a href="#">Home 2</a>
+              </li>          
+            </ul>            
+          </li>
+
+          <li>
+            <a href="#">About</a>
+          </li>
+
+           <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+            <ul class="collapse lisst-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Pages 1</a>
+              </li>
+              <li>
+                <a href="#">Pages 2</a>
+              </li>              
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Policy</a>
+          </li>
+
+          <li>
+            <a href="#">Content Us</a>
+          </li>      
+        </ul>
+      </nav> 
+
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>          
+          </div>          
+        </nav>
+<br><br>
+
+      <div class="jumbotron">
+        <div class="card">
+          <div class="card-header">
+            <h2>ဝန်ထမ်းအင်အားစာရင်း</h2>           
+          </div>
+          
+          <div class="card-body">        
+           <table class="table table-dark table-hover table-bordered-bottom">       
+            <thead>
+            <tr>
+              <th scope="col">စဉ်</th>
+              <th scope="col">အမည်</th>
+              <th scope="col">ရာထူး</th>
+              <th scope="col">ဌာန</th>
+              <th class="text-right">လုပ်ပိုင်ခွင့်</th>
+            </tr> 
+            </thead>
+          <tbody>
+            <tr>
+              <td>၁</td>
+              <td>ဒေါ်ရီရီမြင့်</td>
+              <td>ညွှန်ကြားရေးမှူး</td>
+              <td>ကွန်ပျူတာ</td>
+              <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                <button class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၂</td>
+              <td>ဒေါ်ကြွယ်ကြွယ်သူ</td>
+              <td>ဒုတိယညွှန်ကြားရေးမှူး</td>
+              <td>ကွန်ပျူတာ</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                <button class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၃</td>
+              <td>ဒေါ်ဝင့်ရည်ကျော်</td>
+              <td>လက်ထောက်ညွှန်ကြားရေးမှူး</td>
+              <td>ကွန်ပျူတာ</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                <button class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၄</td>
+              <td>ဒေါ်ရီရီဝင်း</td>
+              <td>ဦးစီးအရာရှိ</td>
+              <td>ကွန်ပျူတာ</td>
+              <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                <button class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၅</td>
+              <td>ဒေါ်မြသီတာ</td>
+              <td>ကွန်ပျူတာစီစဉ်ရေးမှူး</td>
+              <td>ကွန်ပျူတာ</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                <button class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+              </td>             
+            </tr>
+            <tr>
+              <td>၆</td>
+              <td>ဒေါ်အိသိမ့်</td>
+              <td>လ/ထကွန်ပျူတာစီစဉ်ရေးမှူး</td>
+              <td>ကွန်ပျူတာ</td>
+              <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၇</td>
+              <td>ဒေါ်ပွင့်ဖြူသင်းခိုင်</td>
+              <td>ဒုလ/ထကွန်ပျူတာလုပ်မှူး</td>
+              <td>ကွန်ပျူတာ</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၈</td>
+              <td>ဒေါ်နန်းခင်ဖြူဖြူသိန်း</td>
+              <td>အငယ်တန်းစာရေး</td>
+              <td>ယာဉ်မှတ်ပုံတင်</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၉</td>
+              <td>ဦးစိုင်းလှအောင်</td>
+              <td>စာရင်းကိုင်-၃</td>
+              <td>ငွေစာရင်း</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+              </td>
+            </tr>
+            <tr>
+              <td>၁၀</td>
+              <td>ဦးမြင့်မြတ်စိုးအောင်</td>
+              <td>အငယ်တန်းစာရေး</td>
+              <td>ယာဉ်မောင်းလိုင်စင်</td>
+               <td class="text-right">
+                <button class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+          
+        </div>
+      </div>  
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+         </div>     
+      </div>   
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('#sidebarCollapse').on('click',function(){
+    $('#sidebar').toggleClass('active');
+    });
+  });
+</script>
+    
+</body>
+</html>

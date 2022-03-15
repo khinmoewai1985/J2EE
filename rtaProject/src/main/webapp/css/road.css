@@ -1,0 +1,26 @@
+body {
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65));
+}
+.yellow_road h1 {
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
+  font-weight: 600;
+  color: lightyellow;
+
+}
+
+.red_road h1 {
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
+  font-weight: 600;
+  color: darkred;
+
+}
+
+.blue_road h1 {
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
+  font-weight: 600;
+  color: darkblue;
+
+}

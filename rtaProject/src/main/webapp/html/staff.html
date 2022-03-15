@@ -1,0 +1,161 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.sql.* "%>
+<%@ page import="com.org.example.MySQLAccess" %>
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Staff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="css/staff.css" rel="stylesheet">
+   </head>
+  <body>
+  
+ <%
+ 
+  Connection con=MySQLAccess.InitializeDatabase();
+	
+	try {
+					
+					
+					PreparedStatement pre=con.prepareStatement("Select * from stafflist");
+					ResultSet rs=pre.executeQuery();
+					
+  %>   
+    <div class="wrapper">
+      <nav id="sidebar">
+        <div class="sidebar-header text-center">
+          <h3>RTAD</h3>
+        </div>
+
+        <ul class="lisst-unstyled components">
+          <p>Licence Main Menu</p>
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Entry</a>
+            <ul class="collapse lisst-unstyled" id="homeSubmenu">
+              <li>
+                <a href="new.jsp">New Registration</a>
+              </li>
+              <li>
+                <a href="renew.jsp">Renew</a>
+              </li>
+              <li>
+            <a href="duplicate.jsp">Duplicate</a>
+          </li>
+          <li>
+            <a href="other changes.jsp">Other Changes</a>
+          </li>
+          <li>
+            <a href="transfer.jsp">Transfer</a>
+          </li>
+            </ul>            
+          </li>
+          
+           <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prohabit</a>
+            <ul class="collapse lisst-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Licence Prohabit</a>
+              </li>
+              <li>
+                <a href="prohabit.jsp">NRC Prohabit</a>
+              </li>              
+            </ul>
+          <li>
+            <a href="stafflist.jsp">Staff Action</a>
+          </li>
+
+        </li>
+      </ul>
+        
+
+      </nav>
+
+
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>          
+          </div>          
+        </nav>
+<br><br>
+
+      <div class="jumbotron">
+        <div class="card">
+          <div class="card-header">
+            <h2>ဝန်ထမ်းတာဝန်လုပ်ပိုင်ခွင့်</h2>           
+          </div>
+          
+          <div class="card-body">        
+           <table class="table table-dark table-hover table-bordered-bottom">       
+            <thead>
+            <tr>
+              <th scope="col">စဉ်</th>
+              <th scope="col">အမည်</th>
+              <th scope="col">ရာထူး</th>
+              <th scope="col">ဌာန</th>
+              <th class="text-right">လုပ်ပိုင်ခွင့်</th>
+            </tr> 
+            </thead>
+          <tbody>
+                       
+<% while(rs.next())
+{ %>
+	 		<tr>
+              	<td><%= rs.getString("စဉ်") %></td>
+              	<td><%= rs.getString("အမည်") %></td>
+              	<td><%= rs.getString("ရာထူး") %></td>
+              	<td><%= rs.getString("ဌာန") %></td>
+              	
+              	<td class="text-right">
+              	<form action="stafflist.jsp">
+                   <button type="submit" class="btn btn-primary badge-pill" style="width:100px;">Detail</button>
+                  </form>
+              	<form action="stafflist.jsp">
+                   <button type="submit" class="btn btn-primary badge-pill" style="width:80px;">EDIT</button>
+                  </form>
+                  <form action="stafflist.jsp">
+                   <button type="submit" class="btn btn-danger badge-pill" style="width:100px;">Delete</button>
+                 </form>                 
+               </td>
+             </tr>
+<% } %>
+          </tbody>
+        </table>
+          </div>
+          
+        </div>
+      </div>           
+         </div>     
+      </div>   
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('#sidebarCollapse').on('click',function(){
+    $('#sidebar').toggleClass('active');
+    });
+  });
+</script>
+    
+</body>
+<%
+con.close();
+	}catch ( SQLException e){
+		e.printStackTrace();
+	}
+	
+%>
+
+</html>
